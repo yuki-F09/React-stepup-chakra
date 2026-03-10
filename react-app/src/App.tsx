@@ -1,14 +1,22 @@
 import React from 'react';
 import './App.css';
-import { ChakraProvider ,Button } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter} from 'react-router-dom';
+
+
 import { system } from './theme/theme';
+import { Router } from "./router/Router"
+
+
 function App() {
   return (
     <>
     <ChakraProvider value={system}>
     <div className="App">
-      <Button>ボタン</Button>
-      <h1>なんでもいい</h1>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+
     </div>
 
     </ChakraProvider>
